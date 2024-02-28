@@ -89,3 +89,6 @@ Consider the following HTML document:
                     +--|---|---+
                     |   |   |   |
                   [li] [li] [li]
+
+
+diff bet inner text, inner content, 

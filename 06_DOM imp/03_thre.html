@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body style="background-color: black; color: white;">
+    <ul class="language">
+      <li>Javascript</li>
+    </ul>
+
+    <script>
+      function addLanguage(langName) {
+        const li = document.createElement("li");
+
+        li.innerHTML = langName;
+        document.querySelector(".language").appendChild(li);
+      }
+      addLanguage("cpp");
+      addLanguage("java");
+
+      //optimise way
+
+      function addOptiLanguage(langname) {
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(langname));
+        document.querySelector(".language").appendChild(li);
+      }
+      addOptiLanguage("python");
+
+      //lets Edit
+
+      const lang = document.querySelector("li:nth-child(2)");
+
+      const newLi = document.createElement("li");
+      newLi.textContent = "REact";
+      lang.replaceWith(newLi);
+
+      //lets make function
+
+      function replaceElement(element, nthChild) {
+        const lang = document.querySelector(`li:nth-child(${nthChild})`);
+
+        const newLi = document.createElement("li");
+        newLi.textContent = element;
+        lang.replaceWith(newLi);
+      }
+
+      replaceElement("mayur", 1);
+
+      //let remove the element from the
+
+      function removeElement() {
+        const removeLang =  document.querySelector("li:last-child");
+      removeLang.remove()
+      }
+      removeElement()
+      removeElement()
+
+      
+    </script>
+  </body>
+</html>
