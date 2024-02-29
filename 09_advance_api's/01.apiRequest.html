@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: black; color: white;">
+    <div class="image">
+      <img src="" id="avatar" alt="" />
+      <h2 id="name"></h2>
+    </div>
+
+    <script>
+      const url = "http://api.github.com/users/mayurgavhane03";
+
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", url);
+      xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          console.log(this.responseText);
+          const data = this.responseText;
+          const json = JSON.parse(data);
+          console.log(json.name);
+
+          const img = document.getElementById("avatar");
+          img.src = json.avatar_url;
+          const name = document.getElementById("name");
+          name.innerHTML = json.name;
+        }
+      };
+
+      //   xhr.send();
+
+      const fetchData = async (url) => {
+        try {
+          const data = await fetch(url);
+
+          const json = await data.json();
+          console.log(json);
+
+          const img = document.getElementById("avatar");
+          img.src = json.avatar_url;
+          const name = document.getElementById("name");
+          name.innerHTML = json.name;
+        } catch (error) {
+          console.log(error);
+        }
+      };
+      fetchData(url);
+    </script>
+  </body>
+</html>
