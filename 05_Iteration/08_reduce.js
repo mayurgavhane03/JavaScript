@@ -15,7 +15,7 @@ const shoppingCart = [
     { itemName: "react", price: 500 },
 ];
 
-const totalPrice = shoppingCart.reduce((acc, item) => acc + item.price, 0);
+const totalPrice = shoppingCart.reduce((acc, item) => acc + item.price, 100);
 console.log(totalPrice);
 // Output: 1200
 
@@ -26,8 +26,10 @@ console.log(totalPrice);
 // - The currentValue is the current element being processed in the array.
 // - The callback function is executed for each element in the array, updating the accumulator based on the logic defined.
 // - The result is the final accumulated value.
-// - The initialValue is an optional parameter, specifying the initial value of the accumulator. If omitted, the first element of the array is used as the initial accumulator value.
+// - The initialValue is an optional parameter, specifying the initial value of the accumulator. If omitted, the first element of the array 
+//    is used as the initial accumulator value.
 // - In Part 1, reduce is used to sum up the elements of the nums array, starting from an initial value of 0.
 // - In Part 2, reduce is used to calculate the total price of items in the shoppingCart array.
 // - Understanding how to use reduce is crucial for performing aggregations on arrays, such as summing values or finding maximum/minimum values.
-// - It's a versatile and powerful tool for array manipulation.
+// - It's a versatile and powerful tool for array manipulation. 
+// Array manipulation allows you to do tasks such as add, remove, or transform elements in your array

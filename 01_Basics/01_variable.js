@@ -12,6 +12,6 @@ console.table([name, Id, city, age]);  // Outputs the values of 'name', 'Id', 'c
 let newId;  // Declares a variable 'newId' with a value of undefine
 
 //var keyword is available in everyscope it has scope problem if we declare name in many scope {  }  
-// we can one name change happen in all  name variable so dont use variable
+// we can one name change happen in all  name variable so dont use var variable
 
 console.log({name, newId, Id , age})

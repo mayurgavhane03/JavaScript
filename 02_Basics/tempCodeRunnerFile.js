@@ -1,1 +1,1 @@
-isLoggedIn
+ymbol property

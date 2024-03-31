@@ -1,7 +1,11 @@
 (function chai() {
   console.log("db connected");
 })();
+//imediatly invoke function expresstion
+/* 
+()()
 
+*/
 
 
 ((name)=>{

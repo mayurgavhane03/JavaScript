@@ -11,6 +11,10 @@ const user =  {
 // Change the value of the 'name' property of the 'user' object
 user.name = "mayur gavhane";
 
+function updateUser(name) {
+    user.name = name 
+}
+
 // Define a function 'greetings' as a method of the 'user' object
 user.greetings = function () {
     console.log("Hello")
@@ -26,7 +30,7 @@ console.log(user.greetingsTow())
 
 
 // Call the 'greetingsTow' method of the 'user' object
-console.log(user.greetingsTow())
+console.log(  user.greetingsTow())
 
 // Define an arrow function 'changer' to change the 'name' property of the 'user' object
 const changer = (newName) => {

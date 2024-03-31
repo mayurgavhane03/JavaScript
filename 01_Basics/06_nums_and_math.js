@@ -22,5 +22,5 @@ console.log(num3.toLocaleString())
 console.log(Math)
 console.log(Math.round(num2))
 
-console.log((Math.random()*100 )+ 1 )
+console.log((Math.random()*1000 )+ 1 )
 console.log(Math.floor(Math.random()*100))

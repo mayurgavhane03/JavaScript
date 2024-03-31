@@ -9,13 +9,17 @@ const surName = 'Gavhane'
 
 console.log(`${name} ${surName}`)
 
+let st = "mayur "
 
-const newName = new String("   your    ")
+const newName = new String("   mayur    ")
 
 console.log(newName)
 console.log(newName)
 console.log(typeof newName )
+
 console.log(newName.split('').reverse()) //reverse
+
+
 console.log(newName.toLocaleLowerCase())
 console.log(newName.__proto__) //empty object
 
